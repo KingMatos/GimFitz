@@ -1,0 +1,155 @@
+  #mySearchSectionRoutine .inner-form,
+  #myApplySectionRoutine .inner-form,
+  #mySearchSection .inner-form,
+  #mySearchUserSectionRoutine .inner-form {
+	width: 100%;
+  }
+  
+  #mySearchSectionRoutine .input-field,
+  #mySearchSection .input-field,
+  #myApplySectionRoutine .input-field,
+  #mySearchUserSectionRoutine .input-field {
+	position: relative;
+  }
+  
+  #mySearchSectionRoutine input,
+  #mySearchSection input,
+  #myApplySectionRoutine input,
+  #mySearchUserSectionRoutine input{
+	height: 100%;
+	border: 0;
+	background: #fff;
+	display: block;
+	width: 100%;
+	padding: 10px 32px 10px 40px;
+	font-size: 18px;
+	color: #666;
+	border-radius: 3px;
+	height: 70px;
+	color: #555;
+  }
+
+  #mySearchSectionRoutine input.placeholder,
+  #mySearchSection input.placeholder,
+  #myApplySectionRoutine input.placeholder,
+  #mySearchUserSectionRoutine input.placeholder{
+	color: #999;
+	font-size: 18px;
+  }
+
+  #mySearchSectionRoutine input:-moz-placeholder,
+  #mySearchSection input:-moz-placeholder,
+  #myApplySectionRoutine input:-moz-placeholder,
+  #mySearchUserSectionRoutine input:-moz-placeholder{
+	color: #999;
+	font-size: 18px;
+  }
+
+  #mySearchSectionRoutine input::-webkit-input-placeholder,
+  #mySearchSection input::-webkit-input-placeholder,
+  #myApplySectionRoutine input::-webkit-input-placeholder,
+  #mySearchUserSectionRoutine input::-webkit-input-placeholder{
+	color: #999;
+	font-size: 18px;
+  }
+
+  #mySearchSectionRoutine input:hover, #mySearchSectionRoutine input:focus,
+  #mySearchSection input:hover, #mySearchSection input:focus,
+  #myApplySectionRoutine input:hover, #myApplySectionRoutine input:focus,
+  #mySearchUserSectionRoutine input:hover, #mySearchUserSectionRoutine input:focus{
+	box-shadow: none;
+	outline: 0;
+  }
+
+  #mySearchSectionRoutine .basic-search,
+  #mySearchSection .basic-search,
+  #myApplySectionRoutine .basic-search,
+  #mySearchUserSectionRoutine .basic-search{
+	margin-bottom: 5px;
+	box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  #mySearchSectionRoutine .icon-wrap,
+  #mySearchSection .icon-wrap,
+  #myApplySectionRoutine .icon-wrap,
+  #mySearchUserSectionRoutine .icon-wrap{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: end;
+		justify-content: flex-end;
+	-ms-flex-align: center;
+		align-items: center;
+	width: 35px;
+	height: 100%;
+	color: #555;
+  }
+
+  #mySearchSectionRoutine .icon-wrap span,
+  #mySearchSection .icon-wrap span,
+  #myApplySectionRoutine .icon-wrap span,
+  #mySearchUserSectionRoutine .icon-wrap span{
+	width: 20px;
+	height: 20px;
+	fill: #ccc;
+  }
+
+  #mySearchSectionRoutine .data-to-search,
+  #mySearchSection .data-to-search,
+  #myApplySectionRoutine .data-to-search,
+  #mySearchUserSectionRoutine .data-to-search {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: start;
+		justify-content: flex-start;
+	-ms-flex-align: center;
+		align-items: center;
+	width: 50px;
+	top: 0;
+	right: 0;
+	position: absolute;
+	font-weight: bold;
+	color: #555;
+	height: 100%;
+	font-size: 14px;
+  }
+
+  #mySearchSectionRoutine .data-to-search button,
+  #mySearchSection .data-to-search button,
+  #myApplySectionRoutine .data-to-search button,
+  #mySearchUserSectionRoutine .data-to-search button{
+	background-color: #fff;
+	border: none;
+  }
+
+  #mySearchSection .col .card,
+  #mySearchUserSectionRoutine .col .card{
+	height: 315px;
+  }
+
+  #mySearchSection .col.lm-auto .card,
+  #mySearchUserSectionRoutine .col.col.lm-auto .card{
+	height: 570px;
+  }
+
+
+  @media (max-width: 770px) {
+    #mySearchSection .col.lm-auto .card,
+    #mySearchUserSectionRoutine .col.lm-auto .card{
+      height: auto;
+    }
+  }
+  
+  #mySearchSection hr,
+  #mySearchUserSectionRoutine hr{
+	color: #7700ff;
+  }
+
+  .max-img-size {
+	max-width: 150px;
+	max-height: 150px;
+	width: auto;
+	height: auto;
+  }

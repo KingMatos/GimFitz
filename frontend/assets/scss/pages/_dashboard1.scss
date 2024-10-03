@@ -1,0 +1,86 @@
+// ----------------------------------------------
+// Dashboard1 Style
+// ----------------------------------------------
+
+  .col .card {
+    height: 480px;
+    margin-bottom: 20px;
+  }
+
+  .col.lm-auto .card {
+    margin-bottom: 20px;
+    height: 230px;
+  }
+
+  /*
+  @media (max-width: 575px) {
+    .col.lm-auto .card{
+      width: auto;
+    }
+  }
+
+  @media (min-width: 770px) {
+    .col.lm-auto .card{
+      width: 450px;
+    }
+  }
+ 
+
+  @media (max-width: 770px) {
+    #chart{
+      width: 140;
+    }
+  }
+
+  @media (min-width: 770px) {
+    #chart{
+      width: 220;
+    }
+  }
+ */
+  /*
+  @media (min-width: 1200px) {
+    .card.daily{
+      width: auto;
+      max-width: 1040px;
+    }
+  }
+  
+
+  .line-chart{
+    width: 515px;
+  }
+
+  @media (max-width: 770px) {
+    .line-chart{
+      width: auto;
+    }
+  }
+*/
+  .col.lm-auto.daily-left{
+    padding-left: 40px;
+    text-align: center;
+  }
+
+  .col.lm-auto.daily-left .content h1{
+    font-size: 11px;
+  }
+
+  .dailyBox{
+    border: none;
+    border-bottom: 2px solid #5543ca;
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  .btn.btn-outline-primary.mr-md-3.mb-2.mb-md-0 {
+    margin-top: 35px;
+  }
+
+  .DailyProfitsCollected{
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #696868;
+
+  }
