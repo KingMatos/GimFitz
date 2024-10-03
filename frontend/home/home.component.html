@@ -1,0 +1,179 @@
+<!-- START slider -->
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="slider-item" style="background-image: url('assets/images/slider-1.jpg');">
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center">
+                  <div class="col-md-8 text-center col-sm-12 element-animate">
+                    <h1>Salud es riqueza</h1>
+                    <p class="mb-5">"Invierte en tu salud hoy para cosechar bienestar mañana. Cuida tu cuerpo, nutre tu mente. En cada elección saludable, construyes un futuro más fuerte y vibrante."</p>
+                    <p><a data-bs-toggle="modal" data-bs-target="#modalLoginForm" class="btn btn-white btn-outline-white">Comenzar</a></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="slider-item" style="background-image: url('assets/images/slider-2.jpg');">
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center">
+                  <div class="col-md-8 text-center col-sm-12 element-animate">
+                    <h1>Disfruta de Gymfitz</h1>
+                    <p class="mb-5">"Despierta tu fuerza interior, cada levantamiento es un paso más hacia tu mejor versión. En el gimnasio, forjamos cuerpos fuertes y mentes imparables. ¡Haz cada entrenamiento contar!"</p>
+                    <p><a data-bs-toggle="modal" data-bs-target="#modalLoginForm" class="btn btn-white btn-outline-white">Comenzar</a></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- END slider -->
+  
+  <!-- START slider -->
+  <section class="section element-animate" id="aboutSection">
+  
+  <div class="clearfix mb-5 pb-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center heading-wrap">
+          <h2>GYM<span>FITZ</span></h2>
+          <span class="back-text">Gym</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="carouselIndicators_SecondSection" class="carousel slide carousel-fade" data-mdb-carousel-init>
+      <div class="carousel-indicators_SecondSection">
+        <button type="button" data-bs-target="#carouselIndicators_SecondSection" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselIndicators_SecondSection" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselIndicators_SecondSection" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselIndicators_SecondSection" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-secondsection">
+            <a href="#" class="item-class">
+              <div class="text">
+                <p class="class-details"><i class="material-icons">&#xEA0B;</i></p>
+                <h2 class="class-heading">Entrenamientos de Alta Intensidad</h2>
+              </div>
+              <img src="assets/images/img_1_square.jpg" alt="" class="img-fluid">
+            </a>
+            <a href="#" class="item-class">
+              <div class="text">
+                <p class="class-details"><i class="material-icons">&#xEB43;</i></p>
+                <h2 class="class-heading">Desafío Total Fitness</h2>
+              </div>
+              <img src="assets/images/img_2_square.jpg" alt="" class="img-fluid">
+            </a>
+            <a href="#" class="item-class">
+                <div class="text">
+                  <p class="class-details"><i class="material-icons">&#xEAA2;</i></p>
+                  <h2 class="class-heading">Rutina Explosiva</h2>
+                </div>
+                <img src="assets/images/img_3_square.jpg" alt="" class="img-fluid">
+            </a>
+            <a href="#" class="item-class">
+              <div class="text">
+                <p class="class-details"><i class="material-icons">&#xEBC4;</i></p>
+                <h2 class="class-heading">Esculpe tu Cuerpo</h2>
+              </div>
+              <img src="assets/images/img_4_square.jpg" alt="" class="img-fluid">
+            </a>
+      </div>
+  </div>
+  
+  </section> <!-- .section -->
+  <!-- END slider -->
+  
+  
+  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+  
+  <!--    MODALS      -->
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <!-- Login Form -->
+          <form (submit)="signIn()">
+            
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            
+            <a class="text-nowrap logo-img text-center d-block py-3 w-100">
+              <img src="../assets/images/logos/dark-logo.svg" width="180" alt="" draggable="false">
+            </a>
+            <p class="text-center">Desafía tus Límites</p>
+            <div class="modal-body">
+              <div class="mb-3">
+                  <label for="Username" class="form-label">Documento de Identidad</label>
+                  <input type="text" [(ngModel)]="user.dni" name="username" class="form-control" id="Username" placeholder="Ingresa Documento de Identidad" autocomplete="off" required (keypress)="onKeyPress($event)">
+              </div>
+  
+              <div class="mb-3">
+                  <label for="Password" class="form-label">Contraseña</label>
+                  <input type="password" [(ngModel)]="user.password" name="password" class="form-control" id="Password" placeholder="Ingresa Contraseña" required (keypress)="onKeyPress($event)">
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input primary" type="checkbox" value="" id="remember" checked>
+                  <label class="form-check-label text-dark" for="remember">
+                    Recuerde este dispositivo
+                  </label>
+              </div>
+            </div>
+            <div class="modal-footer pt-2">                  
+              <button type="submit" class="btn btn-primary w-100 rounded-2">Iniciar sesión</button>
+            </div>
+            
+        </form>
+      </div>
+    </div>
+  </div>
+  
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3">
+      <div id="liveToast" class="toast custom-toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header bg-danger">
+         
+          <strong class="me-auto">Gymfitz</strong>
+          <small>just now</small>
+        </div>
+        <div class="toast-body">
+          Por favor, completa todos los campos.
+        </div>
+      </div>
+    </div>
+  
+    <!--Para mensajes lindos error global-->
+    <div id="messageErrorModal" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+              <div class="modal-header">
+                  <div class="icon text-center d-block py-3 w-100">
+                    <a><img src="../../../assets/images/alerts/ErrorAlert.png" alt="myIcon" draggable="false"></a>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <h1>Error!</h1>
+                  <p id="messageTextError"></p>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                  <button type="button" class="redo btn" data-bs-dismiss="modal">Ok</button>
+                  <span>-- Gymfitz Gym --</span>
+              </div>
+          </div>
+      </div>
+    </div>
+  
+  <!--        END MODALS      -->
