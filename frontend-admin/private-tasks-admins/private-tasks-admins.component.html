@@ -1,0 +1,1490 @@
+<!-- parte superior del documento -->
+<audio #SuccessSound>
+    <source src="../../../assets/sounds/SuccesfullyAdditiong.mp3" type="audio/mp3" >
+  </audio>
+  
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+  data-sidebar-position="fixed" data-header-position="fixed">
+  <!-- Sidebar Start -->
+  <aside class="left-sidebar">
+      <div>
+          <div class="brand-logo d-flex align-items-center justify-content-between">
+              <a class="text-nowrap logo-img">
+                  <img src="../../../assets/images/logos/dark-logo.svg" alt="" width="180">
+              </a>
+              <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+                  <i class="ti ti-x fs-8"></i>
+              </div>
+          </div>
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+              <ul id="sidebarnav">
+                  <li class="nav-small-cap">
+                      <span class="hide-menu">Home</span>
+                  </li>
+                    <li class="sidebar-item">
+                      <a class="sidebar-link" (click)="toggleDashboardSection()" id="0" aria-expanded="false">
+                        <span>
+                          <i class="ti ti-layout-dashboard"></i>
+                        </span>
+                        <span class="hide-menu">Panel</span>
+                      </a>
+                    </li>
+  
+                  <li class="nav-small-cap">
+                      <span class="hide-menu">Crud</span>
+                  </li>
+  
+                  <li class="sidebar-item">
+                      <a class="sidebar-link" (click)="toggleAddUserSection()"  id="1" aria-expanded="false">
+                          <span>
+                              <i class="ti ti-article"></i>
+                          </span>
+                          <span class="hide-menu">Gestión de usuarios</span>
+                      </a>
+                  </li>
+  
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" (click)="toggleSearchSection()"  id="1" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-search"></i>
+                        </span>
+                        <span class="hide-menu">Buscar</span>
+                    </a>
+                  </li>
+  
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" (click)="toggleRenewSection()"  id="1" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-star"></i>
+                        </span>
+                        <span class="hide-menu">Renovar</span>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" (click)="toggleAddRoutineSection()"  id="1" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-package"></i>
+                        </span>
+                        <span class="hide-menu">Gestión de rutinas</span>
+                    </a>
+                  </li>
+  
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" (click)="toggleSearchSectionRoutine()"  id="1" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-target"></i>
+                        </span>
+                        <span class="hide-menu">Buscar rutina</span>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" (click)="toggleApplyRoutine()"  id="1" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-wand"></i>
+                        </span>
+                        <span class="hide-menu">Aplicar rutina</span>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" (click)="toggleSearchUserRoutine()"  id="1" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-heart"></i>
+                        </span>
+                        <span class="hide-menu">Buscar rutinas usuario</span>
+                    </a>
+                  </li>
+
+              <!--AUTH-->
+              <li class="nav-small-cap">
+                  <span class="hide-menu">Auth</span>
+              </li>
+  
+              <li class="sidebar-item">
+                  <a class="sidebar-link" (click)="onLogout()" aria-expanded="false">
+                      <span>
+                          <i class="ti ti-logout"></i>
+                      </span>
+                      <span>Cerrar Sesión</span>
+                  </a>
+              </li>
+          
+              </ul>
+              <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
+                  <div class="d-flex">
+                    <div class="unlimited-access-title me-3">
+                      <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Enjoy Teacher</h6>
+                      <a target="_blank" class="btn btn-primary fs-2 fw-semibold lh-sm">V1.0.1</a>
+                    </div>
+                    <div class="unlimited-access-img">
+                      <img src="https://res.cloudinary.com/dvfzrbt2g/image/upload/v1704995915/logo1_q82sb4.png" alt="" class="img-fluid" draggable="false">
+                    </div>
+                  </div>
+                </div>
+          </nav>
+  
+      </div>
+  </aside>
+  <!--  Sidebar End -->
+  
+  
+  <div class="body-wrapper">
+      <header class="app-header">
+          <nav class="navbar navbar-expand-lg navbar-light">
+              <ul class="navbar-nav">
+                  <li class="nav-item d-block d-xl-none">
+                      <a class="nav-link sidebartoggler nav nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                          <i class="ti ti-menu-2"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                        <i class="ti ti-bell-ringing"></i>
+                        <div class="notification bg-primary rounded-circle"></div>
+                      </a>
+                    </li>
+              </ul>
+              <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                  <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                    <!--<a target="_blank" class="btn btn-primary">Download Free</a>--> 
+                    <a target="_blank" class="btn btn-primary">{{ UsernameBox ? '@' + UsernameBox : '...' }}</a>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img [src]="fotoPerfilUsuario ||'../assets/images/profiles/user-1.jpg'" alt="" width="35" height="35" class="rounded-circle">
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                        <div class="message-body">
+                          <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item" (click)="toggleMyProfileSection()">
+                            <i class="ti ti-user fs-6"></i>
+                            <p class="mb-0 fs-3">Mi Perfil</p>
+                          </a>
+                          <a (click)="onLogout()" class="btn btn-outline-primary mx-3 mt-2 d-block">Cerrar Sesión</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+          </nav>
+      </header>
+  <!--  Header End -->
+  
+  <div *ngIf="showDashboardSection" class="container-fluid" id="myDashboardSection">
+    <div class="row flex-column flex-sm-row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">Resumen de Ganancias</h5>
+            <div style="text-align:center">
+              <apx-chart
+                *ngIf="chartData && chartData.series"
+                [series]="chartData.series"
+                [chart]="chartData.chart!"
+                [xaxis]="chartData.xaxis!"
+                [plotOptions]="chartData.plotOptions!"
+                [legend]="chartData.legend!"
+                [dataLabels]="chartData.dataLabels!"
+                [colors]="chartData.colors!"
+                [grid]="chartData.grid!"
+              ></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col lm-auto">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h5 class="card-title mb-9 fw-semibold">Ganancia Anual</h5>
+                <h4 class="fw-semibold mb-3">${{ yearlyTotal | number }}</h4>
+                <div class="d-flex align-items-center mb-3">
+                  <span
+                    class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-arrow-up-left text-success"></i>
+                  </span>
+                  <p class="text-dark me-1 fs-3 mb-0">+</p>
+                  <p class="fs-3 mb-0">Every month.</p>
+                </div>
+  
+                <div class="d-flex align-items-center">
+                  <div class="me-4">
+                    <span class="round-8 bg-primary rounded-circle me-2 d-inline-block"></span>
+                    <span class="fs-2">{{ currentYear }}</span>
+                  </div>
+                  <div>
+                    <span class="round-8 bg-light-primary rounded-circle me-2 d-inline-block"></span>
+                    <span class="fs-2">{{ currentYear }}</span>
+                  </div>
+                </div>
+  
+              </div>
+              <div class="col lm-auto">
+                <div class="chart">
+                  <apx-chart
+                  *ngIf="radarData && radarData.series"
+                  [series]="radarData.series"
+                  [chart]="radarData.chart!"
+                  [xaxis]="radarData.xaxis!"
+                  [yaxis]="radarData.yaxis!"
+                  [markers]="radarData.markers!"
+                  [fill]="radarData.fill!"
+                  [stroke]="radarData.stroke!"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h5 class="card-title mb-9 fw-semibold">Ganancia Mensual</h5>
+              </div>
+              <div class="col lm-auto">
+                <div class="d-flex justify-content-end">
+                  <div
+                    class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-currency-dollar fs-6"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <h4 class="fw-semibold mb-3">{{ monthlyTotal | currency: 'USD' }}</h4>
+  
+            <div class="d-flex align-items-center pb-1">
+              <span
+                class="me-2 rounded-circle bg-light-danger round-20 d-flex align-items-center justify-content-center">
+                <i class="ti ti-arrow-up-left text-success"></i>
+              </span>
+              <p class="text-dark me-1 fs-3 mb-0">Ganancias en el mes de, </p>
+              <p class="fs-3 mb-0">{{ currentMonthName }}.</p>
+            </div>
+  
+          </div>
+            <div class="areaChart">
+              <apx-chart
+                *ngIf="areaData && areaData.series"
+                [series]="areaData.series"
+                [chart]="areaData.chart!"
+                [stroke]="areaData.stroke!"
+                [fill]="areaData.fill!"
+                [markers]="areaData.markers!"
+                [tooltip]="areaData.tooltip!"
+              ></apx-chart>
+            </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--Daily graph profit-->
+    <div class="card daily">
+      <div class="card-body daily-profit">
+        <div class="row flex-column flex-sm-row">
+          <div class="col">
+            <h5 class="card-title mb-9 fw-semibold">Ganancias Diarias</h5>
+  
+            <div class="line-chart">
+              <apx-chart
+                *ngIf="lineData && lineData.series"
+                [series]="lineData.series"
+                [chart]="lineData.chart!"
+                [dataLabels]="lineData.dataLabels!"
+                [stroke]="lineData.stroke!"
+                [markers]="lineData.markers!"
+                [colors]="lineData.colors!"
+                [grid]="lineData.grid!"
+                [xaxis]="lineData.xaxis!"
+              ></apx-chart>
+            </div>
+  
+          </div>
+          <div class="col lm-auto daily-left">
+            <div class="content">
+              <h1>Monto Diario</h1>
+              <p>Cordial Saludo, <br>{{ nombresUsuario }}</p>
+              <span>Por favor, añade un monto diario.</span>
+              <br><input type="text" class="dailyBox" placeholder="$">
+  
+              <br><button type="button" class="btn btn-outline-primary mr-md-3 mb-2 mb-md-0" (click)="agregarMontoDiario()">
+                <i class="ti ti-cash text-success"></i> Agregar
+              </button>
+              <p class="DailyProfitsCollected">${{ dailyProfitsCollected.toFixed(2) }}</p>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <!--Agregar usuarios-->
+  <div *ngIf="showAddUserSection" class="container-fluid">
+    <!--  Row 1 -->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-12">
+                <div class="container">
+                  <div class="table-wrapper">
+                      <div class="table-title">
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <h2>Datos</h2>
+                              </div>
+                              <div class="col-sm-6">
+                                  <a data-bs-toggle="modal" data-bs-target="#addUserModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE02E;</i><span>Agregar nuevo usuario</span></a>
+                                  <a data-bs-toggle="modal" data-bs-target="#deleteUserModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE16C;</i><span></span>Eliminación global</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="table-responsive table-responsive-sm">
+                        <table class="table table-striped table-hover">
+                          <thead>
+                              <tr>
+                                  <th>-</th>
+                                  <th>ID</th>
+                                  <th>Nombres</th>
+                                  <th>Apellidos</th>
+                                  <th>Fecha Inicio</th>
+                                  <th>Acciones</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <!--This is my contents-->
+                              <tr *ngFor="let user of getUsersForPage(); let i = index">
+                                <td>{{ i + 1 }}</td> <!-- Aquí está el índice -->
+                                <td>{{ user.dni }}</td>
+                                <td>{{ user.nombres }}</td>
+                                <td>{{ user.apellidos }}</td>
+                                <td>{{ user.initial_date }}</td>
+                                <td>
+                                  <a data-bs-toggle="modal" data-bs-target="#editUserModal" class="edit" data-toggle="modal" (click)="openEditUserModal(user)"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                                  <a data-bs-toggle="modal" data-bs-target="#deleteUser" class="delete" data-toggle="modal" (click)="openDeleteUserModal(user)"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE92B;</i></a>
+                                </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                      <!--This is because we wanted the page to be pretty-->
+                      <div class="clearfix">
+                        <div class="hint-text">Mostrando <b>{{ getUsersForPage().length }}</b> de <b>{{ totalUsers }}</b> entradas ( usuarios ).</div>
+                        <ul class="pagination">
+                          <li class="page-item" [class.disabled]="currentPage === 1">
+                            <a class="page-link" (click)="changePage(currentPage - 1)">Anterior</a>
+                          </li>
+                          <li class="page-item" *ngFor="let page of getPages()">
+                            <a class="page-link" (click)="changePage(page)" [class.active]="currentPage === page">{{ page }}</a>
+                          </li>
+                          <li class="page-item" [class.disabled]="currentPage === totalPages">
+                            <a class="page-link" (click)="changePage(currentPage + 1)">Siguiente</a>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                  </div>
+              </div>
+  
+              <!-- Add Modal HTML -->
+              <div id="addUserModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                        <form>
+                          <div class="modal-header">
+                              <div class="icon text-center d-block py-3 w-100">
+                                <a><img src="../../../assets/images/logos/dark-logo.svg" alt="myIcon" draggable="false"></a>
+                              </div>
+                          </div>
+                            <div class="modal-body">
+                              <div class="contact-form row">
+                                <div class="col">
+                                  <div class="form-floating mb-3">
+                                      <input type="text" class="form-control" id="id" name="id" required [(ngModel)]="newUser.dni" placeholder="id">
+                                      <label for="id" class="label">Documento de Identidad</label>
+                                  </div>
+                                  <div class="form-floating mb-3">
+                                      <input type="text" class="form-control" id="FullName" name="FullName" required [(ngModel)]="newUser.nombres" placeholder="FullName">
+                                      <label for="FullName" class="label">Nombres Completos</label>
+                                  </div>
+                                  <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="FullLastName" name="FullLastName" required [(ngModel)]="newUser.apellidos" placeholder="FullLastName">
+                                    <label for="FullLastName" class="label">Apellidos Completos</label>
+                                  </div>
+                                </div>
+                                <!-- Columna derecha -->
+                                <div class="col ml-auto">
+                                    <div class="form-floating mb-3">
+                                      <input type="email" class="form-control" id="Email" name="Email" required autocomplete="email" [(ngModel)]="newUser.email" placeholder="Email">
+                                      <label for="Email" class="label">Correo Electrónico</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                      <input type="date" class="form-control" id="initial_date" name="initial_date" required [(ngModel)]="newUser.initial_date">
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancelar">
+                                <input type="submit" class="btn btn-success" (click)="addUser()" value="Agregar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+  
+            <!-- Delete Modal HTML -->
+            <div id="deleteUserModal" class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      
+                      <form>
+                          <div class="modal-header">
+                              <h4 class="modal-title">Eliminar todos los usuarios</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                          </div>
+                          <div class="modal-body">
+                              <p>Está seguro de que desea eliminar estos registros?</p>
+                              <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
+                          </div>
+                          <div class="modal-footer">
+                              <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancelar">
+                              <input type="submit" class="btn btn-danger" (click)="deleteUsers()" value="Eliminar">
+                          </div>
+                      </form>
+                  </div>
+              </div>
+            </div>
+  
+              <!-- Custom's messages 
+              <div id="messageModal" class="modal fade">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Mensaje</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="messageText"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-bs-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              -->
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--My profile-->
+  <div *ngIf="showMyProfileSection" class="container-fluid">
+    <!--  Row 1 -->
+    <div class="col-lg-12">
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Documento de Identidad</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ dniUsuario }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Nombres Completos</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ nombresUsuario }}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Apellidos Completos</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ apellidosUsuario }}</p>
+                </div>
+              </div>    
+              <hr>      
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0">Correo Electrónico</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{ emailUsuario }}</p>
+                </div>
+              </div>
+              <hr>
+            </div>
+  
+            <div class="col lm-auto">
+              <div class="d-flex flex-column align-items-center text-center">
+                <img [src]="fotoPerfilUsuario ||'../assets/images/profiles/user-1.jpg'" alt="searchimageProfile" class="rounded-circle max-img-size-profile" width="200" draggable="false">
+                <div class="mt-3">
+                  <h4></h4>
+                  <p class="text-muted font-size-sm">* Administrador *</p>
+                  <p>Note: Maximum size 200px x 200px</p><br><button data-bs-toggle="modal" data-bs-target="#editUserModal" (click)="openEditUserModal({ _id: userId, dni: dniUsuario, nombres: nombresUsuario, apellidos: apellidosUsuario, edad: edadUsuario, peso: pesoUsuario, estatura: estaturaUsuario, email: emailUsuario, telefono: telefonoUsuario, profileImage: fotoPerfilBuffer })" class="btn btn-warning">Actualizar</button>
+                  
+  
+                </div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="showSearchSection" class="container-fluid" id="mySearchSection">
+    <div class="basic-search">
+      <div class="input-field">
+        <div class="icon-wrap">
+          <span>
+            <i class="ti ti-search"></i>
+          </span>
+        </div>
+        <input id="search" type="text" placeholder="Digite documento de identidad." />
+        <div class="data-to-search">
+          <button class="ti ti-send" (click)="searchUserByDni()"></button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row flex-column flex-sm-row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+              <img src="../assets/images/profiles/user-1.jpg" alt="searchimage" class="rounded-circle max-img-size" width="150" draggable="false">
+              <div class="mt-3">
+                <h4>{{SearchNombres}}</h4>
+                <p class="text-muted font-size-sm">* Usuario *</p>
+                <p>Note: Maximum size 150px x 150px</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col lm-auto">
+  
+        <div class="card">
+          <div class="card-body">
+  
+            <div class="row flex-column flex-sm-row">
+              <div class="col">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Documento de identidad</h6>
+                  </div>
+    
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchDni}}
+                  </div>
+                </div>
+  
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Nombres completos</h6>
+                  </div>
+    
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchNombres}}
+                  </div>
+                </div>
+  
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Apellidos completos</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchApellidos}}
+                  </div>
+                </div>
+                
+                <hr>
+  
+              </div>
+  
+              <div class="col lm-auto">
+    
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Correo</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchEmail}}
+                  </div>
+                </div>
+  
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Fecha inicial</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchFechaInicial}}
+                  </div>
+                </div>
+  
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Fecha final</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchFechaFinal}}
+                  </div>
+                </div>
+                
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Estado Mensualidad</h6>
+                  </div>
+                  <div class="col-sm-9 {{SearchEstadoMensualidadColor}}">
+                    <i class="ti {{SearchEstadoMensualidadIcon}}"></i>{{SearchEstadoMensualidad}}
+                  </div>
+                </div>
+                <hr>
+                
+              </div>
+  
+            </div>
+  
+            <div class="EditSection" style="text-align: center; margin-top: 25px;" *ngIf="SearchEmail">
+              <a data-bs-toggle="modal" data-bs-target="#editUserModal" class="edit" data-toggle="modal" (click)="openEditUserModal({ dni: SearchDni, nombres: SearchNombres, apellidos: SearchApellidos, email: SearchEmail, initial_date: SearchFechaInicial})"><i class="material-icons" data-toggle="tooltip" title="Editar" style="color: orange; cursor: pointer;">&#xE254;</i></a>
+            </div>
+  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  <div *ngIf="showRenewSection" class="container-fluid" id="myRenewSection">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="container">
+              <div class="table-wrapper">
+                <div class="table-title">
+                  <div>
+                    <h2>Datos</h2>
+                  </div>
+                </div>
+                <div class="table-responsive table-responsive-sm">
+                  <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th>-</th>
+                        <th>ID</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Correo</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Final</th>
+                        <th>Acciones</th>
+                    </tr>                    
+                    </thead>
+                    <tbody>
+                        <!--This is my contents-->
+                        <tr *ngFor="let user of expiredUsers; let i = index">
+                          <td>{{ i + 1 }}</td> <!-- Aquí está el índice -->
+                          <td>{{ user.dni }}</td>
+                          <td>{{ user.nombres }}</td>
+                          <td>{{ user.apellidos }}</td>
+                          <td>{{ user.email }}</td>
+                          <td>{{ user.initial_date }}</td>
+                          <td>{{ user.final_date }}</td>
+                          <td>
+                            <a class="renew" data-toggle="modal" (click)="renovarUsuario(user.dni)"><i class="material-icons" data-toggle="tooltip" title="Renovar">&#xEB5A;</i></a>
+                            <a data-bs-toggle="modal" data-bs-target="#deleteUser" class="delete" data-toggle="modal" (click)="openDeleteUserModal(user)"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE92B;</i></a>
+                          </td>
+                        </tr>                    
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+    <!--Modales globales-->
+  
+    <!--Para mensajes lindos-->
+    <div id="messageModal" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+              <div class="modal-header">
+                  <div class="icon text-center d-block py-3 w-100">
+                    <a><img src="../../../assets/images/alerts/SuccessAlert.png" alt="myIcon" draggable="false"></a>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <h1>Success!</h1>
+                  <p id="messageText"></p>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                  <button type="button" class="redo btn" data-bs-dismiss="modal">Ok</button>
+                  <span>-- Gymfitz Gym --</span>
+              </div>
+          </div>
+      </div>
+    </div>
+  
+    <!--Para mensajes lindos error global-->
+    <div id="messageErrorModal" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+              <div class="modal-header">
+                  <div class="icon text-center d-block py-3 w-100">
+                    <a><img src="../../../assets/images/alerts/ErrorAlert.png" alt="myIcon" draggable="false"></a>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <h1>Error!</h1>
+                  <p id="messageTextError"></p>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                  <button type="button" class="redo btn" data-bs-dismiss="modal">Ok</button>
+                  <span>-- Gymfitz Gym --</span>
+              </div>
+          </div>
+      </div>
+    </div>
+  
+    <!-- Delete Component HTML -->
+    <div id="deleteUser" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+                      
+          <form>
+            <div class="modal-header">
+              <h4 class="modal-title">Eliminar usuario</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+              </div>
+                <div class="modal-body">
+                  <p>Está seguro de que desea eliminar este registro?</p>
+                  <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
+              </div>
+              <div class="modal-footer">
+                  <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancelar">
+                  <input type="submit" class="btn btn-danger" (click)="deleteUser()" value="Eliminar">
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <!--Edit Modal HTML-->
+    <div id="editUserModal" class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+              <form>
+                  <div class="modal-header">
+  
+                      <div class="icon text-center d-block py-3 w-100">
+                        <a><img src="../../../assets/images/logos/dark-logo.svg" alt="myIcon" draggable="false"></a>
+                      </div>
+                  </div>
+                  <div class="modal-body">
+                    <div class="contact-form row">
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="Editid" name="Editid" required [(ngModel)]="editedUser.dni" placeholder="Editid">
+                            <label for="Editid" class="label">Documento de Identidad</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="EditFullName" name="EditFullName" required [(ngModel)]="editedUser.nombres" placeholder="EditFullName">
+                            <label for="EditFullName" class="label">Nombres Completos</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="EditFullLastName" name="EditFullLastName" required [(ngModel)]="editedUser.apellidos" placeholder="EditFullLastName">
+                          <label for="EditFullLastName" class="label">Apellidos Completos</label>
+                        </div>
+                      </div>
+                      <!-- Columna derecha -->
+                      <div class="col ml-auto">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="EditEmail" name="EditEmail" required autocomplete="email" [(ngModel)]="editedUser.email" placeholder="EditEmail">
+                            <label for="EditEmail" class="label">Email</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="EditInitial_date" name="EditInitial_date" required [(ngModel)]="editedUser.initial_date" placeholder="EditInitial_date">
+                            <label for="EditInitial_date" class="label">Fecha Inicial</label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancel">
+                      <input *ngIf="isEditing" type="submit" class="btn btn-info" (click)="editUser()" value="Save">
+                  </div>
+              </form>
+          </div>
+      </div>
+    </div>
+  
+  <!--Toast-->
+  <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+    <div id="liveToast" class="toast custom-toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header bg-danger">
+       
+        <strong class="me-auto">Gymfitz</strong>
+        <small>just now</small>
+      </div>
+      <div class="toast-body">
+        Por favor, completa todos los campos.
+      </div>
+    </div>
+  </div>
+  
+ <!--PARA LAS RUTINASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS-->
+ <div *ngIf="showAddRoutineSection" class="container-fluid" id="myAddRoutineSection">
+  <!--  Row 1 -->
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="row">
+        <div class="col-lg-12">
+              <div class="container">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>Datos</h2>
+                            </div>
+                            <div class="col-sm-6">
+                                <a data-bs-toggle="modal" data-bs-target="#addRoutineModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE02E;</i><span>Agregar nueva rutina</span></a>
+                                <a data-bs-toggle="modal" data-bs-target="#deleteRoutineModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE16C;</i><span></span>Eliminación global</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive table-responsive-sm">
+                      <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>-</th>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Tipo Rutina</th>
+                                <th>Repeticiones</th>
+                                <th>Descripcion</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--This is my contents-->
+                            <tr *ngFor="let rutina of getRutinasForPage(); let i = index">
+                              <td>{{ i + 1 }}</td> <!-- Aquí está el índice -->
+                              <td>{{ rutina.id }}</td>
+                              <td>{{ rutina.nombre }}</td>
+                              <td>{{ rutina.tipo_rutina }}</td>
+                              <td>{{ rutina.repeticiones }}</td>
+                              <td>{{ rutina.descripcion }}</td>
+                              <td>
+                                <a data-bs-toggle="modal" data-bs-target="#editRoutineModal" class="edit" data-toggle="modal" (click)="openEditRoutineModal(rutina)"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                                <a data-bs-toggle="modal" data-bs-target="#deleteRoutine" class="delete" data-toggle="modal" (click)="openDeleteRoutineModal(rutina)"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE92B;</i></a>
+                              </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <!--This is because we wanted the page to be pretty-->
+                    <div class="clearfix">
+                      <div class="hint-text">Mostrando <b>{{ getRutinasForPage().length }}</b> de <b>{{ totalRutinas }}</b> entradas ( rutinas ).</div>
+                      <ul class="pagination">
+                        <li class="page-item" [class.disabled]="currentPageRoutines === 1">
+                          <a class="page-link" (click)="changePageRoutine(currentPageRoutines - 1)">Anterior</a>
+                        </li>
+                        <li class="page-item" *ngFor="let page of getPagesRoutines()">
+                          <a class="page-link" (click)="changePageRoutine(page)" [class.active]="currentPageRoutines === page">{{ page }}</a>
+                        </li>
+                        <li class="page-item" [class.disabled]="currentPageRoutines === totalPagesRoutines">
+                          <a class="page-link" (click)="changePageRoutine(currentPageRoutines + 1)">Siguiente</a>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Add Modal HTML -->
+            <div id="addRoutineModal" class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                      <form>
+                        <div class="modal-header">
+                            <div class="icon text-center d-block py-3 w-100">
+                              <a><img src="../../../assets/images/logos/dark-logo.svg" alt="myIcon" draggable="false"></a>
+                            </div>
+                        </div>
+                          <div class="modal-body">
+                            <div class="contact-form row">
+                              <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="newRoutine.nombre" placeholder="name">
+                                    <label for="name" class="label">Nombre</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                  <input type="text" class="form-control" id="Routinetype" name="Routinetype" required [(ngModel)]="newRoutine.tipo_rutina" placeholder="Routinetype">
+                                  <label for="Routinetype" class="label">Tipo rutina</label>
+                                </div>
+                              </div>
+                              <!-- Columna derecha -->
+                              <div class="col ml-auto">
+                                  <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="Repetitions" name="Repetitions" required [(ngModel)]="newRoutine.repeticiones" placeholder="Repetitions">
+                                    <label for="Repetitions" class="label">Repeticiones</label>
+                                  </div>
+                                  <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="Description" name="Description" required [(ngModel)]="newRoutine.descripcion" placeholder="Description">
+                                    <label for="Description" class="label">Descripcion</label>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                              <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancelar">
+                              <input type="submit" class="btn btn-success" (click)="addRoutine()" value="Agregar">
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Delete Modal HTML -->
+          <div id="deleteRoutineModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Eliminar todos los usuarios</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Está seguro de que desea eliminar estos registros?</p>
+                            <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancelar">
+                            <input type="submit" class="btn btn-danger" (click)="deleteRoutines()" value="Eliminar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+          </div>
+
+
+            <!-- Custom's messages 
+            <div id="messageModal" class="modal fade">
+              <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h4 class="modal-title">Mensaje</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                      </div>
+                      <div class="modal-body">
+                          <p id="messageText"></p>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-info" data-bs-dismiss="modal">OK</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+  <div *ngIf="showSearchSectionRoutine" class="container-fluid" id="mySearchSectionRoutine">
+    <div class="basic-search">
+      <div class="input-field">
+        <div class="icon-wrap">
+          <span>
+            <i class="ti ti-search"></i>
+          </span>
+        </div>
+        <input id="search" type="text" placeholder="Digite nombre de la rutina." />
+        <div class="data-to-search">
+          <button class="ti ti-send" (click)="searchRoutineByName()"></button>
+        </div>
+      </div>
+    </div>
+
+    <!--Here-->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-12">
+                <div class="container">
+                  <div class="table-wrapper">
+                      <div class="table-title">
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <h2>Datos</h2>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="table-responsive table-responsive-sm">
+                        <table class="table table-striped table-hover">
+                          <thead>
+                              <tr>
+                                  <th>-</th>
+                                  <th>ID</th>
+                                  <th>Nombre</th>
+                                  <th>Tipo Rutina</th>
+                                  <th>Repeticiones</th>
+                                  <th>Descripcion</th>
+                                  <th>Acciones</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <!--This is my contents-->
+                              <tr *ngFor="let rutina of getRutinasForPageSearch(); let i = index">
+                                <td>{{ i + 1 }}</td> <!-- Aquí está el índice -->
+                                <td>{{ rutina.id }}</td>
+                                <td>{{ rutina.nombre }}</td>
+                                <td>{{ rutina.tipo_rutina }}</td>
+                                <td>{{ rutina.repeticiones }}</td>
+                                <td>{{ rutina.descripcion }}</td>
+                                <td>
+                                  <a data-bs-toggle="modal" data-bs-target="#editRoutineModal" class="edit" data-toggle="modal" (click)="openEditRoutineModal(rutina)"><i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i></a>
+                                  <a data-bs-toggle="modal" data-bs-target="#deleteRoutine" class="delete" data-toggle="modal" (click)="openDeleteRoutineModal(rutina)"><i class="material-icons" data-toggle="tooltip" title="Eliminar">&#xE92B;</i></a>
+                                </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                      <!--This is because we wanted the page to be pretty-->
+                      <div class="clearfix">
+                        <div class="hint-text">Mostrando <b>{{ getRutinasForPageSearch().length }}</b> de <b>{{ totalRutinasSearch }}</b> entradas ( rutinas buscadas ).</div>
+                        <ul class="pagination">
+                          <li class="page-item" [class.disabled]="currentPageRoutinesForSearch === 1">
+                            <a class="page-link" (click)="changePageRoutinesForSearch(currentPageRoutinesForSearch - 1)">Anterior</a>
+                          </li>
+                          <li class="page-item" *ngFor="let page of getPagesRoutinesForSearch()">
+                            <a class="page-link" (click)="changePageRoutinesForSearch(page)" [class.active]="currentPageRoutinesForSearch === page">{{ page }}</a>
+                          </li>
+                          <li class="page-item" [class.disabled]="currentPageRoutinesForSearch === totalPagesRoutinesForSearch">
+                            <a class="page-link" (click)="changePageRoutinesForSearch(currentPageRoutinesForSearch + 1)">Siguiente</a>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showApplyRoutine" class="container-fluid" id="myApplySectionRoutine">
+    <div class="basic-search">
+      <div class="input-field">
+        <div class="icon-wrap">
+          <span>
+            <i class="ti ti-search"></i>
+          </span>
+        </div>
+        <input id="search" type="text" placeholder="Digite nombre de la rutina." />
+        <div class="data-to-search">
+          <button class="ti ti-send" (click)="searchRoutineByName()"></button>
+        </div>
+      </div>
+    </div>
+
+    <!--Here-->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-12">
+                <div class="container">
+                  <div class="table-wrapper">
+                      <div class="table-title">
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <h2>Datos</h2>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="table-responsive table-responsive-sm">
+                        <table class="table table-striped table-hover">
+                          <thead>
+                              <tr>
+                                  <th>-</th>
+                                  <th>ID</th>
+                                  <th>Nombre</th>
+                                  <th>Descripcion</th>
+                                  <th>Acciones</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <!--This is my contents-->
+                              <tr *ngFor="let rutina of getRutinasForPageSearch(); let i = index">
+                                <td>{{ i + 1 }}</td> <!-- Aquí está el índice -->
+                                <td>{{ rutina.id }}</td>
+                                <td>{{ rutina.nombre }}</td>
+                                <td>{{ rutina.descripcion }}</td>
+                                <td>
+                                  <a data-bs-toggle="modal" data-bs-target="#ApplyRoutineModal" class="edit" data-toggle="modal" (click)="openApplyRoutineModal(rutina)"><i class="material-icons" data-toggle="tooltip" title="Asignar">&#xE9FE;</i></a>
+                                </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                      <!--This is because we wanted the page to be pretty-->
+                      <div class="clearfix">
+                        <div class="hint-text">Mostrando <b>{{ getRutinasForPageSearch().length }}</b> de <b>{{ totalRutinasSearch }}</b> entradas ( rutinas buscadas ).</div>
+                        <ul class="pagination">
+                          <li class="page-item" [class.disabled]="currentPageRoutinesForSearch === 1">
+                            <a class="page-link" (click)="changePageRoutinesForSearch(currentPageRoutinesForSearch - 1)">Anterior</a>
+                          </li>
+                          <li class="page-item" *ngFor="let page of getPagesRoutinesForSearch()">
+                            <a class="page-link" (click)="changePageRoutinesForSearch(page)" [class.active]="currentPageRoutinesForSearch === page">{{ page }}</a>
+                          </li>
+                          <li class="page-item" [class.disabled]="currentPageRoutinesForSearch === totalPagesRoutinesForSearch">
+                            <a class="page-link" (click)="changePageRoutinesForSearch(currentPageRoutinesForSearch + 1)">Siguiente</a>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showSearchUserRoutine" class="container-fluid" id="mySearchUserSectionRoutine">
+    <div class="basic-search">
+      <div class="input-field">
+        <div class="icon-wrap">
+          <span>
+            <i class="ti ti-search"></i>
+          </span>
+        </div>
+        <input id="search" type="text" placeholder="Digite documento de identidad." />
+        <div class="data-to-search">
+          <button class="ti ti-send" (click)="searchUserByDniandRoutine()"></button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row flex-column flex-sm-row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+              <img src="../assets/images/profiles/user-1.jpg" alt="searchimage" class="rounded-circle max-img-size" width="150" draggable="false">
+              <div class="mt-3">
+                <h4>{{SearchNombres}}</h4>
+                <p class="text-muted font-size-sm">* Usuario *</p>
+                <p>Note: Maximum size 150px x 150px</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col lm-auto">
+  
+        <div class="card">
+          <div class="card-body">
+  
+            <div class="row flex-column flex-sm-row">
+              <div class="col">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Documento de identidad</h6>
+                  </div>
+    
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchDni}}
+                  </div>
+                </div>
+  
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Nombres completos</h6>
+                  </div>
+    
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchNombres}}
+                  </div>
+                </div>
+  
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Apellidos completos</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchApellidos}}
+                  </div>
+                </div>
+                
+                <hr>
+  
+              </div>
+  
+              <div class="col lm-auto">
+    
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Correo</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchEmail}}
+                  </div>
+                </div>
+  
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Fecha inicial</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchFechaInicial}}
+                  </div>
+                </div>
+  
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Fecha final</h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    {{SearchFechaFinal}}
+                  </div>
+                </div>
+                
+                <hr>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0">Estado Mensualidad</h6>
+                  </div>
+                  <div class="col-sm-9 {{SearchEstadoMensualidadColor}}">
+                    <i class="ti {{SearchEstadoMensualidadIcon}}"></i>{{SearchEstadoMensualidad}}
+                  </div>
+                </div>
+                <hr>
+                
+              </div>
+  
+            </div>
+  
+            <div class="EditSection" style="text-align: center; margin-top: 25px;" *ngIf="SearchEmail">
+              <a data-bs-toggle="modal" data-bs-target="#editUserModal" class="edit" data-toggle="modal" (click)="openEditUserModal({ dni: SearchDni, nombres: SearchNombres, apellidos: SearchApellidos, email: SearchEmail, initial_date: SearchFechaInicial})"><i class="material-icons" data-toggle="tooltip" title="Editar" style="color: orange; cursor: pointer;">&#xE254;</i></a>
+            </div>
+  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+
+    <!--Here-->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="row">
+          <div class="col-lg-12">
+                <div class="container" *ngIf="rutinasUsuario.length > 0">
+                  <div class="table-wrapper">
+                      <div class="table-title">
+                          <div class="row">
+                              <div class="col-sm-6">
+                                  <h2>Datos - Rutinas del usuario</h2>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="table-responsive table-responsive-sm">
+                        <table class="table table-striped table-hover">
+                          <thead>
+                              <tr>
+                                  <th>-</th>
+                                  <th>ID</th>
+                                  <th>Nombre</th>
+                                  <th>Tipo Rutina</th>
+                                  <th>Repeticiones</th>
+                                  <th>Descripcion</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <!--This is my contents-->
+                              <tr *ngFor="let rutina of rutinasUsuario; let i = index">
+                                <td>{{ i + 1 }}</td> <!-- Aquí está el índice -->
+                                <td>{{ rutina.id }}</td>
+                                <td>{{ rutina.nombre }}</td>
+                                <td>{{ rutina.tipo_rutina }}</td>
+                                <td>{{ rutina.repeticiones }}</td>
+                                <td>{{ rutina.descripcion }}</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      </div>
+                      <!--This is because we wanted the page to be pretty-->
+                      <div class="clearfix">
+                        <div class="hint-text">Mostrando <b>{{ getRutinasForPageSearchandUser().length }}</b> de <b>{{ totalRutinasSearchandUser }}</b> entradas ( rutinas encontradas ).</div>
+                        <ul class="pagination">
+                          <li class="page-item" [class.disabled]="currentPage === 1">
+                            <a class="page-link" (click)="changePage(currentPage - 1)">Anterior</a>
+                          </li>
+                          <li class="page-item" *ngFor="let page of getPages()">
+                            <a class="page-link" (click)="changePage(page)" [class.active]="currentPage === page">{{ page }}</a>
+                          </li>
+                          <li class="page-item" [class.disabled]="currentPage === totalPages">
+                            <a class="page-link" (click)="changePage(currentPage + 1)">Siguiente</a>
+                          </li>
+                        </ul>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+
+              <!-- Delete Component HTML -->
+              <div id="deleteRoutine" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                                
+                    <form>
+                      <div class="modal-header">
+                        <h4 class="modal-title">Eliminar rutina</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                        </div>
+                          <div class="modal-body">
+                            <p>Está seguro de que desea eliminar este registro?</p>
+                            <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancelar">
+                            <input type="submit" class="btn btn-danger" (click)="deleteRoutine()" value="Eliminar">
+                        </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+    <!--Edit Modal HTML-->
+    <div id="editRoutineModal" class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+              <form>
+                  <div class="modal-header">
+
+                      <div class="icon text-center d-block py-3 w-100">
+                        <a><img src="../../../assets/images/logos/dark-logo.svg" alt="myIcon" draggable="false"></a>
+                      </div>
+                  </div>
+                  <div class="modal-body">
+                    <div class="contact-form row">
+                      <div class="col">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="EditName" name="EditName" required [(ngModel)]="editedRoutine.nombre" placeholder="EditName">
+                            <label for="EditName" class="label">Nombre</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" id="EditRoutineType" name="EditRoutineType" required [(ngModel)]="editedRoutine.tipo_rutina" placeholder="EditRoutineType">
+                          <label for="EditRoutineType" class="label">Tipo rutina</label>
+                      </div>
+                      </div>
+                      <!-- Columna derecha -->
+                      <div class="col ml-auto">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="EditRepetitions" name="EditRepetitions" required [(ngModel)]="editedRoutine.repeticiones" placeholder="EditRepetitions">
+                            <label for="EditRepetitions" class="label">Repeticiones</label>
+                          </div>
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="EditDescription" name="EditDescription" required [(ngModel)]="editedRoutine.descripcion" placeholder="EditDescription">
+                            <label for="EditDescription" class="label">Descripcion</label>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancel">
+                      <input *ngIf="isEditing" type="submit" class="btn btn-info" (click)="editRoutine()" value="Save">
+                  </div>
+              </form>
+          </div>
+      </div>
+    </div>
+
+    <!--Apply Routine Modal HTML-->
+    <div id="ApplyRoutineModal" class="modal fade">
+      <div class="modal-dialog">
+          <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+              <form>
+                  <div class="modal-header">
+
+                      <div class="icon text-center d-block py-3 w-100">
+                        <a><img src="../../../assets/images/logos/dark-logo.svg" alt="myIcon" draggable="false"></a>
+                      </div>
+                  </div>
+                  <div class="modal-body">
+                    <div class="contact-form row">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="IdPersona" name="IdPersona" required [(ngModel)]="ApplyPerson.dni" placeholder="IdPersona">
+                        <label for="IdPersona" class="label">Id Persona</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                      <input type="button" class="btn btn-default" data-bs-dismiss="modal" value="Cancel">
+                      <input *ngIf="isApplying" type="submit" class="btn btn-info" (click)="applyRoutine()" value="Apply">
+                  </div>
+              </form>
+          </div>
+      </div>
+    </div>
+
+  <!--Aqui vamos bn-->
+  </div>
